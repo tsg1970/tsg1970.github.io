@@ -411,7 +411,7 @@ var resizePizzas = function(size) {
         document.querySelector("#pizzaSize").innerHTML = "Large";
         return;
       default:
-        //console.log("bug in changeSliderLabel");
+        console.log("bug in changeSliderLabel");
     }
   }
 
@@ -434,7 +434,7 @@ var resizePizzas = function(size) {
         case "3":
           return 0.5;
         default:
-          //console.log("bug in sizeSwitcher");
+          console.log("bug in sizeSwitcher");
       }
     }
 
@@ -499,11 +499,10 @@ function updatePositions() {
   window.performance.mark("mark_start_frame");
 
   var items = document.getElementsByClassName('mover');
-  var scrollTop = document.body.scrollTop;
+  var scrollTop = document.body.scrollTop/1250;
 
   for (var i = 0; i < items.length; i++) {
-    //var phase = Math.sin((document.body.scrollTop / 1250) + (i % 5));
-    var phase = Math.sin((scrollTop / 1250) + (i % 5));
+    var phase = Math.sin((scrollTop) + (i % 5));
     items[i].style.left = items[i].basicLeft + 100 * phase + 'px';
   }
 
