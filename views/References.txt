@@ -1,0 +1,7 @@
+Websites
+1. jpegreducer.com
+2. gtmetrix.com
+3. udacity.com
+4. w3schools.com
+5. developer.mozilla.org
+6. developers.google.com/speed/pagespeed/insights
